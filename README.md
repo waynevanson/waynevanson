@@ -1,6 +1,8 @@
-# Full Stack Typescript
+# Typescript, front to back. 
 
-Heavily practised programmer using `Typescript`, `React`, `NodeJS` and `fp-ts` ecosystem.
+Thanks for dropping in.
+
+I'm a programmer who's primary toolset is `Typescript`, `React`, `NodeJS` and `fp-ts` ecosystem.
 
 Experienced in Test Driven Development (TDD), CSS processors, asynchronous programming, linux, git, backend frameworks and managing relational/nosql databases.
 
