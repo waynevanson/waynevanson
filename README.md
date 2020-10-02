@@ -1,5 +1,3 @@
-# Typescript, front to back. 
-
 Thanks for dropping in.
 
 I'm a web developer/programmer who's primary toolset is `Typescript`, `React` and `NodeJS`.
