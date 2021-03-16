@@ -1,8 +1,4 @@
-# Summary
-
-
-
-## Personal
+# Wayne Van Son
 
 
 ## Statistics
