@@ -1,9 +1,6 @@
-I'm a web developer/programmer who's primary toolset is `Typescript`, `React` and `NodeJS`.
+# WELCOME!
 
-Testing as I go (mostly), it becomes a joy contributing and maintaining open source software.
+Thanks for popping by!
 
-Been playing around with purescript and haskell on a machine running voidlinux.
-Functional programming for life!
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=waynevanson)](https://github.com/anuraghazra/github-readme-stats)
 
-I spend my days cycling, programming and taking biggest step of all; the smallest.
-`
