@@ -3,8 +3,9 @@
 Hi There! Thanks for popping by.
 
 The tools I jump to due to familiarity are React, Typescript, NodeJS, fp-ts, linux, docker and JamStack development.
+Tools I endeavour to be proficient at are Haskell, PureScript, algorithms and compilers.
 
-I'm open for work and a chat, so get in touch!
+I'm open for work and a chat, so feel free to get in touch!
 
 ## Statistics
 
