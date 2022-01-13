@@ -1,6 +1,5 @@
-What's going on!
+Hello World!
 
-When I'm not working, I basically spend my time nerding out on fp-ts and Rust, alongside contributions to related projects.
-Big into testing, familiar with the Webdriver Protocol and preach continuous delivery, where the software is always in a deployable state.
+Employably useful with React, Typescript, NodeJS, Docker, Linux, Rust, but there's more to life than writing code! (sometimes)
 
-When not in a chair, I'm cooking dinner, cycling, hold my cat like a baby and spending time with family and friends.
+I enjoy doing yoga, exercise, socializing, cranking the music down to 11, and loving my cat Kevin.
