@@ -15,7 +15,8 @@
 	<body>
 		<h1>Astro</h1>
 
-		<script>
+		<script lang="typescript">
+			//@ts-ignore
 			if (window.netlifyIdentity) {
 				window.netlifyIdentity.on("init", (user) => {
 				if (!user) {
