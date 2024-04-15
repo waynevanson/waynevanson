@@ -1,31 +1,10 @@
 ---
-
+import LayoutBase from "../layouts/layout-base.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>	
-	</head>
-	<body>
-		<h1>Astro</h1>
-
-		<script lang="typescript">
-			//@ts-ignore
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.on("init", (user) => {
-				if (!user) {
-					window.netlifyIdentity.on("login", () => {
-						document.location.href = "/admin/";
-					});
-				}
-				});
-			}
-		</script>
-	</body>
-</html>
+<LayoutBase title="Home">
+  <main>
+    <h1>Home</h1>
+    <p>Hello, World!</p>
+  </main>
+</LayoutBase>
