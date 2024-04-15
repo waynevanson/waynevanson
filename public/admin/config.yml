@@ -1,0 +1,13 @@
+backend:
+  name: github
+  branch: main
+  repo: waynevanson/waynevanson
+media_folder: /src/media
+public_folder: /public
+collections:
+  - name: posts
+    label: Posts
+    folder: src/content/posts
+    fields:
+      - label: Language
+        name: language
