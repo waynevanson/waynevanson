@@ -11,3 +11,4 @@ collections:
     fields:
       - label: Language
         name: language
+        widget: string
