@@ -1,0 +1,39 @@
+---
+import type { GetStaticPaths } from "astro"
+import { getCollection } from "astro:content"
+import LayoutBase from "../../../layouts/layout-base.astro"
+import { marked } from "marked"
+
+interface Props {
+  content: string
+  slug: string
+  summary: string
+  title: string
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await getCollection("posts")
+
+  const unresolved = posts.map(async (post) => ({
+    params: { slug: post.slug },
+    props: {
+      content: await marked(post.body),
+      slug: post.slug,
+      summary: post.data.summary,
+      title: post.data.title,
+    },
+  }))
+
+  return await Promise.all(unresolved)
+}
+
+const { content, summary, title } = Astro.props
+---
+
+<LayoutBase title={title}>
+  <article class="p-2">
+    <h1>{title}</h1>
+    <p>{summary}</p>
+    <div set:html={content} />
+  </article>
+</LayoutBase>
