@@ -1,32 +1,34 @@
 ---
 interface Props {
-	title: string
+  title: string
 }
 
 const { title } = Astro.props
 ---
+
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title} - Wayne Van Son</title>
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>	
-	</head>
-	<body>
-        <slot></slot>
-		<script lang="typescript">
-			//@ts-ignore
-			if (window.netlifyIdentity) {
-				window.netlifyIdentity.on("init", (user) => {
-				if (!user) {
-					window.netlifyIdentity.on("login", () => {
-						document.location.href = "/admin/";
-					});
-				}
-				});
-			}
-		</script>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title} - Wayne Van Son</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+  </head>
+  <body>
+    <slot />
+    <script lang="typescript">
+      //@ts-ignore
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/"
+            })
+          }
+        })
+      }
+    </script>
+  </body>
 </html>
