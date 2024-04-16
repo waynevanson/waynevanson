@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   branch: main
   repo: waynevanson/waynevanson
 media_folder: /src/media
