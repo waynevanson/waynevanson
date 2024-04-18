@@ -1,5 +1,26 @@
 ---
+import { getCollection } from "astro:content"
 import LayoutBase from "../../layouts/layout-base.astro"
+
+const posts = await getCollection("posts")
 ---
 
-<LayoutBase title="Blog" />
+<LayoutBase title="Blog">
+  <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {
+      posts.map(({ data: { title, summary }, slug }) => (
+        <li>
+          <a
+            href={`/blog/posts/${slug}`}
+            class="block p-4 rounded-xl bg-gradient-to-br from-blue-800 to-blue-900 border-2 border-transparent hover:border-blue-400"
+          >
+            <article class="flex flex-col gap-2">
+              <h2 class="text-2xl">{title}</h2>
+              <summary class="text-sm truncate">{summary}</summary>
+            </article>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</LayoutBase>

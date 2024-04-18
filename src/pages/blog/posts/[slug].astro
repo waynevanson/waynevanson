@@ -34,6 +34,25 @@ const { content, summary, title } = Astro.props
   <article class="p-2">
     <h1>{title}</h1>
     <p>{summary}</p>
-    <div set:html={content} />
+    <div id="content" set:html={content} />
   </article>
 </LayoutBase>
+
+<script>
+  import type { HTMLTag } from "astro/types"
+
+  const styles: Partial<Record<HTMLTag, string>> = {
+    p: "p-10",
+    h2: "text-xl",
+  }
+
+  const content = document.querySelector("#content")
+
+  for (const [tag, classes] of Object.entries(styles)) {
+    const elements = content?.querySelectorAll(tag) ?? []
+
+    for (const element of elements) {
+      element.classList.add(classes)
+    }
+  }
+</script>
