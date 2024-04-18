@@ -43,10 +43,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const unresolved = posts.map(async (post) => ({
     params: { slug: post.slug },
     props: {
+      ...post.data,
       content: await markdownToHtml(post.body),
       slug: post.slug,
-      summary: post.data.summary,
-      title: post.data.title,
     },
   }))
 
