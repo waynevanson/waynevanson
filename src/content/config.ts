@@ -8,4 +8,11 @@ export const collections = {
       summary: z.string(),
     }),
   }),
+  pages: defineCollection({
+    type: "content",
+    schema: z.object({
+      title: z.string(),
+      path: z.string(),
+    }),
+  }),
 }

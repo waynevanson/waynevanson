@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from "astro"
+import LayoutBase from "../layouts/layout-base.astro"
+import { markdownToHtml } from "../lib"
+import { getCollection } from "astro:content"
+
+interface Props {
+  title: string
+  path: string
+  body: string
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const pages = await getCollection("pages")
+
+  const promises = pages.map(async ({ data: { path, title }, body }) => ({
+    params: { path },
+    props: { path, title, body: await markdownToHtml(body) },
+  }))
+
+  return Promise.all(promises)
+}
+
+const { body, path, title } = Astro.props
+---
+
+<LayoutBase title={title}>
+  <div set:html={body} />
+</LayoutBase>
