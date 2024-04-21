@@ -19,3 +19,17 @@ collections:
       - label: Body
         name: body
         widget: markdown
+  - name: pages
+    label: Pages
+    folder: src/content/pages
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Path
+        name: path
+        widget: string
+      - label: Body
+        name: body
+        widget: markdown
