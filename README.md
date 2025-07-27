@@ -1,1 +1,1 @@
-Why did the mathematician purchase so much moisturiser? Because he loves applying the product (x)
+Why do mathematicians purchase so much moisturiser? Because they love applying the product (x)
