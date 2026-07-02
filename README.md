@@ -1,1 +1,4 @@
-Why do mathematicians purchase so much moisturiser? Because they love applying the product (x)
+GitHub, the platform for backups.
+
+Moving code to my home server @ https://git.waynevanson.com/ and mirroring on GitHub.
+
